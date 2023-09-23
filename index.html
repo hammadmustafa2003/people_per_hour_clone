@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PeoplePerHour</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="output.css" rel="stylesheet"> -->
+    <link href="fonts.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div id="main-content">
+        <header>
+            <nav>
+                <div class="navbar-logo">
+                    <img src="assets/images/logo.svg" height="50px" width="50px" alt="Logo" />
+                    <span><strong>people</strong><span
+                            style="font-weight:lighter">per</span><strong>hour</strong></span>
+                </div>
+                <div class="navbar-div">
+                    <div class="navbar-sub-div">
+                        <div class="navbar-search-div">
+                            <i class="fa fa-search navbarSearchIcon"></i>
+                            <input class="nav-searchbar" type="text" placeholder="SEARCH" />
+                        </div>
+                        <span class="navbar-item"> <a> HOW IT WORKS</a></span>
+                    </div>
+
+                    <div class="navbar-sub-div">
+                        <span class="navbar-item"> <a> LOG IN</a></span>
+                        <span class="navbar-item"> <a> SIGN UP</a></span>
+                        <span class="navbar-item" style="color: orange;"> <a> FREELANCER?</a></span>
+                    </div>
+                </div>
+                <btn class="navbar-mobile-btn" onclick="toggleMenu()">
+                    <img id="navbar-mobile-btn" src="assets/images/menu.svg" />
+                </btn>
+            </nav>
+
+            <div class="categoryBarContainer" id="categoryBarContainer">
+                <div class="scrollArrow left" id="scrollLeft" onclick="rightscroll()">&#9654;</div>
+                <div class="categoryBar" id="categoryBar">
+                    <span class="categoryBarItem">Technology & Programming</span>
+                    <span class="categoryBarItem">Writing & Translation</span>
+                    <span class="categoryBarItem">Design</span>
+                    <span class="categoryBarItem">Digital Marketing</span>
+                    <span class="categoryBarItem">Video, Photo & Image</span>
+                    <span class="categoryBarItem">Business</span>
+                    <span class="categoryBarItem">Music & Audio</span>
+                    <span class="categoryBarItem">Marketing, Branding & Sales</span>
+                    <span class="categoryBarItem">Social Media</span>
+                </div>
+                <div class="scrollArrow right" id="scrollRight" onclick="leftscroll()">&#9654;</div>
+            </div>
+        </header>
+        <div>
+            <aside class="navbar-mobile-transparent" id="navbar-mobile">
+                <div class="navbar-div-mobile">
+                    <div class="navbar-sub-div-mobile">
+                        <div class="navbar-search-div">
+                            <i class="fa fa-search navbarSearchIcon"></i>
+                            <input class="nav-searchbar" type="text" placeholder="SEARCH" />
+                        </div>
+                        <span class="navbar-item"> <a> HOW IT WORKS</a></span>
+                    </div>
+
+                    <div class="navbar-sub-div-mobile">
+                        <span class="navbar-item"> <a> LOG IN</a></span>
+                        <span class="navbar-item"> <a> SIGN UP</a></span>
+                        <span class="navbar-item" style="color: orange;"> <a> FREELANCER?</a></span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+
+        <div class="content">
+            <div class="content-col">
+                <h1> Make bright ideas happen </h1>
+                <p> Access global talent on the freelancer website trusted by over 1 million businesses worldwide. </p>
+                <div class="search-div">
+                    <input class="searchbar" type="text" placeholder="Try 'Graphic Designing'" />
+                    <img class="SearchIcon" src="assets/images/search.svg" height="15px" width="15px">
+                </div>
+            </div>
+            <div class="content-col">
+                <img src="assets/images/image_top1.webp">
+                <div class="author-block">
+                    <img class="author-pic"src="assets/images/profile-pic.webp" alt="profile-pic" />
+                    <h6 >E-commerce Expert</h6>
+                    <div>Martin C.</div>
+                    <div>
+                        <svg fill="#69728C" width="16" height="16"
+                            viewBox="0 0 1024 1024" class="card__ratings--icon⤍FreelancerMiniCard⤚2mk9W">
+                            <path
+                                d="M512.32 115.2l-111.296 286.208h-282.624l229.824 174.592-79.36 288.512 243.456-163.136 243.52 163.136-79.36-288.512 229.76-174.592h-282.56z">
+                            </path>
+                        </svg>
+                        <span class="card__ratings--rating⤍FreelancerMiniCard⤚3PWxT">5.0</span>&nbsp;<span
+                            class="is-muted">(181)</span></div>
+                </div>
+            </div>
+            <div>
+            </div>
+
+
+</body>
+
+
+
+</html>
