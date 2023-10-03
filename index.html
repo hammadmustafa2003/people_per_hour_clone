@@ -15,6 +15,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,6 +33,9 @@
                         <div class="navbar-search-div">
                             <i class="fa fa-search navbarSearchIcon"></i>
                             <input class="nav-searchbar" type="text" placeholder="SEARCH" />
+                            <!-- <span style="scale:150%; color: rgb(52, 168, 202); z-index:200"> -->
+                                <i class="fa fa-angle-down navbarDropIcon " aria-hidden="true"></i>
+                            <!-- </span> -->
                         </div>
                         <span class="navbar-item"> <a> HOW IT WORKS</a></span>
                     </div>
@@ -45,21 +50,27 @@
                     <img id="navbar-mobile-btn" src="assets/images/menu.svg" />
                 </btn>
             </nav>
-                <div class="categoryBarContainer" id="categoryBarContainer">
-                    <div class="scrollArrow left" id="scrollLeft" onclick="rightscroll()"> &lt; </div>
-                    <div class="categoryBar" id="categoryBar">
-                        <span class="categoryBarItem">Technology & Programming</span>
-                        <span class="categoryBarItem">Writing & Translation</span>
-                        <span class="categoryBarItem">Design</span>
-                        <span class="categoryBarItem">Digital Marketing</span>
-                        <span class="categoryBarItem">Video, Photo & Image</span>
-                        <span class="categoryBarItem">Business</span>
-                        <span class="categoryBarItem">Music & Audio</span>
-                        <span class="categoryBarItem">Marketing, Branding & Sales</span>
-                        <span class="categoryBarItem">Social Media</span>
-                    </div>
-                    <div class="scrollArrow right" id="scrollRight" onclick="leftscroll()"> &gt; </div>
+            <div class="categoryBarContainer" id="categoryBarContainer">
+                <div class="mobile-category-opener" id="mobile-category-opener">
+                    Browse by Category
+                    <span style="scale:150%; translate: 10px;">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
                 </div>
+                <div class="scrollArrow left" id="scrollLeft" onclick="rightscroll()"> &lt; </div>
+                <div class="categoryBar" id="categoryBar">
+                    <span class="categoryBarItem">Technology & Programming</span>
+                    <span class="categoryBarItem">Writing & Translation</span>
+                    <span class="categoryBarItem">Design</span>
+                    <span class="categoryBarItem">Digital Marketing</span>
+                    <span class="categoryBarItem">Video, Photo & Image</span>
+                    <span class="categoryBarItem">Business</span>
+                    <span class="categoryBarItem">Music & Audio</span>
+                    <span class="categoryBarItem">Marketing, Branding & Sales</span>
+                    <span class="categoryBarItem">Social Media</span>
+                </div>
+                <div class="scrollArrow right" id="scrollRight" onclick="leftscroll()"> &gt; </div>
+            </div>
             <!-- </div> -->
         </header>
         <div>
@@ -85,35 +96,34 @@
 
         <div class="content">
             <div class="content-col">
-                <h1 id = "content-heading"> Make bright ideas happen </h1>
+                <h1 id="content-heading"> Make bright ideas happen </h1>
                 <p> Access global talent on the freelancer website trusted by over 1 million businesses worldwide. </p>
                 <div class="search-div">
-                    <input id="content-search-bar" class="searchbar" type="text" placeholder="Try 'Graphic Designing'" />
+                    <input id="content-search-bar" class="searchbar" type="text"
+                        placeholder="Try 'Graphic Designing'" />
                     <img id="SearchIcon" class="SearchIcon" src="assets/images/search.svg" height="15px" width="15px">
                 </div>
             </div>
             <div class="content-col">
                 <div class="slide-show-item">
-                    <img src="assets/images/image_top1.webp">
+                    <img class="slide-show-main-img" src="assets/images/image_top1.webp">
                     <div class="author-block">
                         <img class="author-pic" src="assets/images/profile-pic.webp" alt="profile-pic" />
                         <h6>Logo Designer</h6>
                         <div>Oz. F.</div>
                         <div>
-                            <svg fill="#69728C" width="16" height="16" viewBox="0 0 1024 1024"
-                                class="card__ratings--icon⤍FreelancerMiniCard⤚2mk9W">
+                            <svg fill="#69728C" width="16" height="16" viewBox="0 0 1024 1024">
                                 <path
                                     d="M512.32 115.2l-111.296 286.208h-282.624l229.824 174.592-79.36 288.512 243.456-163.136 243.52 163.136-79.36-288.512 229.76-174.592h-282.56z">
                                 </path>
                             </svg>
-                            <span class="card__ratings--rating⤍FreelancerMiniCard⤚3PWxT">5.0</span>&nbsp;<span
-                                class="is-muted">(181)</span>
+                            <span>5.0</span>&nbsp;<span class="is-muted">(181)</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="slide-show-item" style="display: none">
-                    <img src="assets/images/hero-instance-1--desktop.png">
+                    <img class="slide-show-main-img" src="assets/images/hero-instance-1--desktop.png">
                     <div class="author-block">
                         <img class="author-pic" src="assets/images/profile-pic.webp" alt="profile-pic" />
                         <h6>Interface Designer</h6>
@@ -125,14 +135,13 @@
                                     d="M512.32 115.2l-111.296 286.208h-282.624l229.824 174.592-79.36 288.512 243.456-163.136 243.52 163.136-79.36-288.512 229.76-174.592h-282.56z">
                                 </path>
                             </svg>
-                            <span class="card__ratings--rating⤍FreelancerMiniCard⤚3PWxT">5.0</span>&nbsp;<span
-                                class="is-muted">(181)</span>
+                            <span>5.0</span>&nbsp;<span>(181)</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="slide-show-item" style="display: none">
-                    <img src="assets/images/hero-instance-6--desktop.png">
+                    <img class="slide-show-main-img" src="assets/images/hero-instance-6--desktop.png">
                     <div class="author-block">
                         <img class="author-pic" src="assets/images/profile-pic.webp" alt="profile-pic" />
                         <h6>Graphic Designer</h6>
@@ -151,9 +160,18 @@
                 </div>
                 <div class="circle-container"></div>
             </div>
-           
+        </div>
+
 </body>
 
-
+<script>
+    $("document").ready(function () {
+        $("#mobile-category-opener").click(function () {
+            // if(mobileCategoryVisible)
+            $("#categoryBar").slideToggle();
+            $("#categoryBar").css("display", "flex");
+        });
+    });
+</script>
 
 </html>

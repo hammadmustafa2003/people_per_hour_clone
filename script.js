@@ -23,6 +23,11 @@ setInterval(function () {
         scrollLeft.style.display = 'none';
         categoryBar.style.justifyContent = 'center';
     }
+
+    if(window.innerHeight > 1070){
+        console.log("hello");
+        document.getElementById("categoryBarContainer").style.display = "flex";
+    }
 }, 500);
 
 function toggleMenu() {
@@ -33,13 +38,13 @@ function toggleMenu() {
     if (navbar_active) {
         navbar.classList.add("slide-right");
         // setTimeout(function () {
-            navbar.classList.remove('navbar-mobile');
-            navbar.classList.add('navbar-mobile-transparent');
-            document.getElementById('navbar-mobile-btn').src = 'assets/images/menu.svg';
+        navbar.classList.remove('navbar-mobile');
+        navbar.classList.add('navbar-mobile-transparent');
+        document.getElementById('navbar-mobile-btn').src = 'assets/images/menu.svg';
 
-            translateStr = "-" + document.getElementById('navbar-mobile').offsetWidth.toString() + "px 0";
-            document.getElementsByTagName('header')[0].style.translate = translateStr;
-            document.getElementsByClassName("content")[0].style.translate = translateStr
+        translateStr = "-" + document.getElementById('navbar-mobile').offsetWidth.toString() + "px 0";
+        document.getElementsByTagName('header')[0].style.translate = translateStr;
+        document.getElementsByClassName("content")[0].style.translate = translateStr
         // }, 10);
 
 
@@ -47,13 +52,13 @@ function toggleMenu() {
     else {
         navbar.classList.add("slide-left");
         // setTimeout(function () {
-            navbar.classList.add('navbar-mobile');
-            navbar.classList.remove('navbar-mobile-transparent');
-            document.getElementById('navbar-mobile-btn').src = 'assets/images/close.png';
+        navbar.classList.add('navbar-mobile');
+        navbar.classList.remove('navbar-mobile-transparent');
+        document.getElementById('navbar-mobile-btn').src = 'assets/images/close.png';
 
-            translateStr = "-" + document.getElementById('navbar-mobile').offsetWidth.toString() + "px 0";
-            document.getElementsByTagName('header')[0].style.translate = translateStr;
-            document.getElementsByClassName("content")[0].style.translate = translateStr
+        translateStr = "-" + document.getElementById('navbar-mobile').offsetWidth.toString() + "px 0";
+        document.getElementsByTagName('header')[0].style.translate = translateStr;
+        document.getElementsByClassName("content")[0].style.translate = translateStr
         // }, 10);
 
     }
@@ -62,42 +67,42 @@ function toggleMenu() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-	const slideShowItems = document.getElementsByClassName("slide-show-item");
-	const circleContainer = document.querySelector(".circle-container");
+    const slideShowItems = document.getElementsByClassName("slide-show-item");
+    const circleContainer = document.querySelector(".circle-container");
 
-	// Generate circles based on the number of project cards
-	for (let i = 0; i < slideShowItems.length; i++) {
-		const circle = document.createElement("div");
-		circle.classList.add("circle");
-		if (i === 0) {
-			circle.style.backgroundColor = "black";
-		}
-		circleContainer.appendChild(circle);
-	}
+    // Generate circles based on the number of project cards
+    for (let i = 0; i < slideShowItems.length; i++) {
+        const circle = document.createElement("div");
+        circle.classList.add("circle");
+        if (i === 0) {
+            circle.style.backgroundColor = "black";
+        }
+        circleContainer.appendChild(circle);
+    }
 
-	// Attach click event listener to each circle
-	const circles = document.querySelectorAll(".circle");
-	circles.forEach((circle, index) => {
-		circle.addEventListener("click", function () {
-			showOtherItem(index - itemIndex);
-		});
-	});
+    // Attach click event listener to each circle
+    const circles = document.querySelectorAll(".circle");
+    circles.forEach((circle, index) => {
+        circle.addEventListener("click", function () {
+            showOtherItem(index - itemIndex);
+        });
+    });
 });
 
 var itemIndex = 0;
 var colors = ['red', 'blue', 'deeppink']
 var placeholder_texts = ['Try \'Logo Designing\'', 'Try \'Web Development\'', 'Try \'Graphic Designing\'']
 async function showOtherItem(direction) {
-	var circles = document.getElementsByClassName("circle");
-	// projectCards = document.getElementsByClassName("project-card");
-	slideShowItems = document.getElementsByClassName("slide-show-item");
+    var circles = document.getElementsByClassName("circle");
+    // projectCards = document.getElementsByClassName("project-card");
+    slideShowItems = document.getElementsByClassName("slide-show-item");
     if (
-		itemIndex + direction >= 0 &&
-		itemIndex + direction < slideShowItems.length
-	) {
+        itemIndex + direction >= 0 &&
+        itemIndex + direction < slideShowItems.length
+    ) {
         // slideShowItems[itemIndex].classList.add("fade-out");
-        for(let i = 0; i < 30; i++) {
-            slideShowItems[itemIndex].style.opacity = 1 - i/30;
+        for (let i = 0; i < 30; i++) {
+            slideShowItems[itemIndex].style.opacity = 1 - i / 30;
             await new Promise(r => setTimeout(r, 1));
         }
 
@@ -112,17 +117,17 @@ async function showOtherItem(direction) {
 
         slideShowItems[itemIndex].style.display = "flex"; // Show the next card
         slideShowItems[itemIndex].style.opacity = "1"; // Fade in the next card
-		// Transition duration (milliseconds), adjust as needed
-	}
-	return;
+        // Transition duration (milliseconds), adjust as needed
+    }
+    return;
 }
 
 
 setInterval(function () {
-    if(itemIndex == 2) {
+    if (itemIndex == 2) {
         showOtherItem(-2);
     }
-    else{
+    else {
         showOtherItem(1);
     }
 }, 3000);
